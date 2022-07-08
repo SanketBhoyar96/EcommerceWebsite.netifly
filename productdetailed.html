@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Ec_style.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Spartan' sans-serif;
+        }
+        h1{
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
+        h2{
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
+        h4{
+            font-size: 20px;
+            color: #222;
+        }
+        h6{
+            font-weight: 16px;
+            font-size: 12px;
+        }
+        p{
+            font-size: 16px;
+            color: #465b52;
+            margin: 15px 0 20px 0;
+        }
+        .section-p1{
+            padding: 40px 80px;
+        }
+        .section-m1{
+            margin: 40px 0;
+        }
+        button.normal{
+            font-size: 14px;
+            font-weight: 15px;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius:4px ;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+        button.normal-2{
+            font-size: 12px;
+            font-weight: 600;
+            padding: 11px 18px;
+            color: #fff;
+            background-color:transparent;
+            border-radius:4px ;
+            cursor: pointer;
+            border: 1px solid #fff;
+            outline: none;
+            transition: 0.2s;
+        }
+        body{
+            width: 100%;
+        }
+        .imgheader{
+            height: 80px;
+            width: 200px;
+            
+        }
+        #header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background: #d4d7e5;
+            box-shadow: 0 10px 20px rgb(0, 0, 0, 0);
+            z-index: 999;
+            position: sticky;
+        }
+        #navbar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #navbar li{
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+        }
+        #navbar li a{
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            transition: 0.3s ease;
+
+        }
+        #navbar li a:hover{
+            color: #088178;
+            background-color:white;
+            border-radius: 5px;
+        }
+        #navbar li a:hover, 
+        #navbar li a.active{
+            color: #1e8079;
+        }
+        #navbar li a.active::after,
+        #navbar li a:hover::after{
+        content: "";
+        width: 30%;
+        height: 2px;
+        background-color: #088178;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+        }
+        .mobile{
+            display: none;
+            align-items: center;
+            position: relative;
+    top: -19px;
+    right: -528px;
+        }
+        /* Home page */
+        #hero{
+            background-image: url("images/AdobeStock_282828365_Preview.jpeg");
+            height: 90vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: top 0% right -53%;
+            background-size: cover;
+            padding: 0 50px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; */
+        }
+        #hero h4{
+             padding-bottom: 15px;
+        }
+           #hero h1{
+               color: #088178;
+           }
+           #hero button{
+               /* background-image: url("images/AdobeSt"); */
+               /* background-color: cadetblue; */
+               /* background-color: transparent; */
+               background-color: aqua;
+               border-radius: 5px;
+               color: #088178;
+               border: 0;
+               padding: 14px 80px 14px 65px;
+               background-repeat: no-repeat;
+               cursor: pointer;
+               font-weight: 700;
+               font-size: 15px;
+           }
+           /* feature box */
+           
+        /* Product1 summer collection desgin */
+        #product1{
+            text-align: center;
+           
+        }
+        #product1 .pro{
+                   width: 15%;
+                   min-width: 200px;
+                   padding: 10px 12px;
+                   border: 2px solid #cce7d0;
+                   border-radius: 25px;
+                   cursor: pointer;
+                   box-shadow: 4px 0px 12px rgb(194, 188, 188);
+                    margin: 15px 0;
+                    transition: 0.2s ease;
+                    position: relative;
+        }
+        #product1 .pro img{
+              width: 100px;
+              border-radius: 20px;
+             
+        }
+        #product1 .pro:hover{
+            box-shadow: 20px 20px 30px rgb(209, 199, 199);
+
+        }
+        #product1 .pro .des{
+            text-align: center;
+            padding: 10px 0;
+        }
+        #product1 .pro .des span{
+          color: #606063;
+          font-size: 12px;
+        }
+        #product1 .pro .des h5{
+            padding-top:7px ;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        #product1 .pro .des i{
+              font-size: 12px;
+              color: rgb(245, 230, 18);
+        }
+        #product1 .pro .des h4{
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+        }
+        #product1 .pro .cart{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 15px;
+            background-color: #e8f6ea;
+            /* font-weight: 500; */
+            color: #088178;
+            border: 1px solid #cce7d0;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+
+        #product1 .pro-container{
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               justify-content: space-evenly;
+               flex-wrap: wrap;
+           }
+           #banner{
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+               justify-content: center;
+               background-image: url("https://image.shutterstock.com/image-photo/collage-photos-young-people-fashion-260nw-1724618173.jpg");
+              width: 100%;
+              height: 40vh;
+              background-size: cover;
+              /* background-position: center; */
+            }
+            #banner .repaircolor{
+              color: white;
+        }
+            #banner h2{
+                color: white;
+                font-size: 30px;
+                padding: 10px 0;
+            }
+            #banner h2 span{
+                color:#ef3636;
+            }
+            #banner button:hover{
+                background: #088178;
+            }
+            #sm-banner .banner-box{
+                display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               /* text-align: center; */
+               justify-content: center;
+               background-image: url("https://thumbs.dreamstime.com/b/happy-beautiful-young-woman-blue-dress-hand-holding-shopping-bags-looking-light-banner-background-copy-space-169293855.jpg");
+              width: 450px;
+              height: 50vh;
+              background-size: cover;
+              padding: 30px
+            }
+            #sm-banner .banner-box2{
+              background-image: url("https://images.creativemarket.com/0.1.0/ps/6741144/1160/772/m1/fpnw/wm0/clothes-shop-roll-up-banner-.png?1564138969&s=1a1b87ac382dfabc032d10ab5cc55b18")
+            }
+            #sm-banner{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap:wrap;
+            }
+            #sm-banner h2{
+                color: #fff;
+                font-size: 20px;
+                font-weight: 300;
+            }
+            #sm-banner span{
+                color:#fcf4f4;
+                font-size: 14px;
+                font-weight: 500;
+                padding-bottom: 15px;
+            }
+            #sm-banner .banner-box:hover button{
+                  background-color: #088178;
+                  border: 1px solid #088178;
+            }
+            #banner-3{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 0 50px;
+            }
+            .banner-box{
+                display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               /* text-align: center; */
+               justify-content: center;
+               background-image: url("https://img.freepik.com/free-psd/urban-fashion-banner-template_23-2148652498.jpg?t=st=1651567957~exp=1651568557~hmac=cb62ddad17ebc57c60ae23db53e8edf0fcf13f123f93b2d6a76a41914e130eb9&w=900");
+              min-width: 30%;
+              height: 30vh;
+              margin-bottom: 30px;
+              background-size: cover;
+              background-position: center;
+              padding: 20px
+            }
+            #banner-3 h2{
+                color: rgb(245, 13, 13);
+                font-weight: 800;
+                font-size: 15px;
+            }
+            .banner-box2{
+                background-image: url("https://as1.ftcdn.net/v2/jpg/04/99/59/24/1000_F_499592496_43He5aLYH7WKje9Dh54q75FItkqL5MMs.jpg");
+            }
+            .banner-box3{
+                background-image: url("https://img.freepik.com/free-psd/fashion-banner-template_23-2148509060.jpg?t=st=1651571564~exp=1651572164~hmac=78423baa0dec28e40b59507056fe60cfdd9fe435837c30eebc06dca91d68ac5a&w=900");
+            }
+            #newsletter{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-position: 20% 30%;
+                background-color: #041e42;
+            }
+            #newsletter h4{
+                font-size: 22px;
+                font-weight: 700;
+                color: white;;
+            }
+            #newsletter p{
+                font-size: 14px;
+                font-weight: 600;
+                columns: #818ea0;
+            }
+            #newsletter p span{
+                color: rgb(241, 138, 69);
+            }
+            #newsletter input{
+                height: 3.125rem;
+                padding: 0 1.25em;
+                font-size: 14px;
+                width: 100%;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                outline: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .formbutton{
+                font-size: 14px;
+            font-weight: 15px;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius:4px ;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+            }
+            #newsletter button{
+                background-color: #088178;
+                color: #fff;
+                white-space: nowrap;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            
+         .form{
+                position: relative;
+    right: -547px;
+    top: -65px;
+    border: 0px solid;
+    }
+    #newsletter .form{
+        display: flex;
+        /* width: 100%; */
+    }
+    .Appsimg{
+        height: 50px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    footer h4{
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+    footer p{
+        font-size: 13px;
+        margin: 0 0 8px 0;
+    }
+    footer a{
+        font-size: 13px;
+        text-decoration: none;
+        color: #222;
+        margin: 10px;
+    }
+    footer .follow{
+        margin-top: 20px;
+    }
+    footer .follow i{
+        color: #465b52;
+        padding-right: 4px;
+        cursor: pointer;
+    }
+    footer .install .row img{
+          border: 1px solid #088178;
+          border-radius: 6px;
+
+    }
+    footer .install img{
+        margin: 10px 0 15px 0;
+    }
+    footer .install i:hover, footer a:hover{
+           color: #088178;
+    }
+    footer .copyright{
+        width: 100%;
+        text-align: center;
+    }
+    /* MEDIA QUARY USE */
+
+    @media (max-width:799px) {
+        #navbar{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            height: 100vh;
+            width: 300px;
+            background-color:#E3E6F3;
+            box-shadow: 0 40px 60px rgb(0,0,0.1);
+            padding: 80px 0 0 10px;
+        }
+        #navbar.active{
+            right: 0px;
+        }
+        #navbar li{
+            margin-bottom: 25px;
+        }
+        .mobile{
+            display: none;
+            align-items: center;
+        }
+        .mobile i{
+            color: #1a1a1a;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+        #lg-bag{
+            display: none;
+        }
+        #hero{
+           height: 70vh;
+           padding: 0 80px;
+           background-position: top 30% right 30%;
+        }
+        #feature{
+            justify-content: center;
+        }
+        #feature .fe-box{
+            margin: 15px 15px;
+        }
+        #product1 .pro-container{
+          justify-content: center;
+        }
+        #product.pro{
+            margin: 15px;
+        }
+        #banner{
+            height: 20vh;
+        }
+        #sm-banner .banner-box{
+            min-width: 100%;
+            height: 30vh;
+
+        }
+        #banner3{
+            padding: 0 40px;
+        }
+        #banner3 .banner-box{
+            width: 28%;
+        }
+        #newsletter .form{
+            width: 70%;
+        }
+
+    }
+    @media (max-width:477px) {
+        .section-p1{
+            padding: 20px;
+        }
+        #header{
+            padding: 10px 30px;
+        }
+        h1{
+            font-size: 38px;
+        }
+        h2{
+            font-size: 38px;
+        }
+        #hero{
+            padding: 0 20px;
+            background-position: 55%;
+        }
+        #feature .fe-box{
+            margin-trim:0 0 15px 0;
+
+        }
+        #product .pro{
+            width:100%
+        }
+        #sm-banner .banner-box{
+            height: 40vh;
+        }
+        #sm-banner .banner-box2{
+            margin-top: 20px;
+        }
+        #banner3 .banner-box{
+            width: 100%;
+        }
+        #newsletter .form{
+            width: 100%;
+        }
+        footer .copyright{
+            text-align:start ;
+        }
+        /* ---------------single product */
+       #prodetails{
+              display: flex;
+                 flex-direction: column;
+}
+#prodetailes .single-pro-image{
+    width: 100%;
+    margin-right: 0px;
+}
+
+
+#prodetailes .single-pro-detailed{
+    width: 100%;
+}
+    }
+
+/* Shop page websites----------------------------------------------- */
+#page-header{
+    background-image: url("https://thumbs.dreamstime.com/b/close-up-photo-stylish-fashion-white-grey-black-colors-women-clothes-choice-designer-store-hang-wooden-hangers-rack-rails-138034541.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#page-header h2,
+#page-header p{
+    color: rgb(4, 3, 3);
+}
+/* ---------------pagination */
+#pagination{
+   text-align: center;
+}
+#pagination >a{
+    text-decoration: none;
+    color: rgb(249, 243, 243);
+    padding:10px 10px;
+    font-weight: 600;
+    /* margin: 10px; */
+    background-color: rgb(24, 134, 72);
+    border-radius: 5px;
+    border: 1px solid rebeccapurple;
+    
+}
+#pagination a i{
+  font-weight: 16px;
+  font-weight: 600;
+}
+
+
+
+
+
+            </style>
+</head>
+<body>
+    <section id="header">
+     <a href="#"><img  class="imgheader" src="https://th.bing.com/th/id/R.9128ca46262e5f5c64001ca24d1ef06b?rik=oLwPBlp%2f21BhWQ&riu=http%3a%2f%2fwww.citysearch.pk%2fUF%2fCompanies%2f5431%2ffashion-central-logo.png&ehk=WKwNn1whJQfSne782urvrHRPwdME26Ot7TwiCQGhyf8%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt=""></a>
+
+     <div>
+         <ul id="navbar">
+            <li><a  href="index.html">Home</a></li>
+             <li><a class="active" href="shopwebsites.html">Shop</a></li>
+             <li><a href="Blog.html">Blog</a></li>
+             <li><a href="About.html">About</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li><a href="cart.html"> <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></li>
+             <!-- <a href="#" id="close" ><i class="fas fa-times"></i></a> -->
+         </ul>
+         <div class="mobile">
+             <a href="citilink.html"> <i class="fa-solid fa-user"></i></a>
+             <i id="bar" class="fas fa-outdent"></i>
+         </div>
+     </div>
+    </section>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+    <section id="page-header">
+    
+       <h2>Stay Home</h2>
+       
+       <p>Save More Coupons & up to 70% Off!</p>
+    </section>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+   <section id="prodetails" class="section-p1">
+
+       <div class="single-pro-image">
+
+           <img id="MainImg" src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1618471944.AP0034.jpeg" alt="" width="100%" height="70%">
+           <div class="small-img-group">
+               <div class="small-img-col">
+                   <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1618984399.AP0034-+_resize.jpg" alt="" width="100%" class="small-img">
+                   
+               </div>
+               <div class="small-img-col">
+                <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1618984385.AP0034+_resize.jpg" alt="" width="100%"></div>
+               <div class="small-img-col">
+                   <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1618984427.AP0034-_resize.jpg" alt="" width="100%" class="small-img">
+
+               </div>
+               <div class="small-img-col">
+                   <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1618984437.AP0034_resize.jpg" alt="" width="100%" class="small-img">
+
+               </div>
+               <div class="small-img-col">
+                   <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1618984385.AP0034+_resize.jpg" alt="" width="100%" class="small-img">
+
+               </div>
+           </div>
+       
+       
+       
+       
+        </div>
+
+        <div class="single-pro-details">
+        <h6>Home / T-Shirts</h6>
+        <h4>Mens's Fashion T Shirts</h4>
+        <h2>$100.00</h2>
+        <select>
+            <option>Select Size</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>Small</option>
+            <option>Large</option>
+        </select>
+        <input type="number" value="1">
+        <button class="normal">Add To Cart</button>
+        <h4>Product Details</h4>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dignissimos eum, eius necessitatibus dolores exercitationem molestiae quisquam, nihil nam maxime iure natus? Dolorem enim natus cumque cupiditate eum, magnam nihil?s</span>
+        </div>
+   </section>
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+  
+<section id="product1" class="section-p1">
+    <h2>Feautured Product</h2>
+    <p>Summer Collection New Morden Design</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1624106778.TEEM0018.jpeg" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>T-Shirt Short Sleeves</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1642670028.AP0016.jpeg" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>T-Shirt Short Sleeves</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1634032882.TEEM0080.jpeg" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>T-Shirt Short Sleeves</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1618469278.AP0013.jpeg" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>T-Shirt Short Sleeves</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+  
+    </div>
+</section>
+<!-- -------------------------------------------------------- -->
+<section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Sign up For Newsletters</h4>
+          <p>Get Email updates about our latest shop and <span>Special Offers.</span></p>
+           <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="formbutton">Sign Up</button> 
+           </div>
+      </div>
+  </section>
+  <!-- ------------------------------------------------------------------------------- -->
+  <footer class="section-p1">
+      <div class="col">
+          <img class="imgheader" src="https://th.bing.com/th/id/R.9128ca46262e5f5c64001ca24d1ef06b?rik=oLwPBlp%2f21BhWQ&riu=http%3a%2f%2fwww.citysearch.pk%2fUF%2fCompanies%2f5431%2ffashion-central-logo.png&ehk=WKwNn1whJQfSne782urvrHRPwdME26Ot7TwiCQGhyf8%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="">
+          <h4>Contact</h4>
+          <p><strong>Address :</strong>Maharastra, Nagpur Butibori-441108 Five Star Hotel</p>
+          <p><strong>Phone :</strong>(+91)9307402321/(+91)9689750969</p>
+          <p><strong>Email :</strong>bhoyarsanket71@gmail.com</p>
+          <p><strong>Hours :</strong>10.00-18.00 Mon-Sat</p>
+          <div class="follow">
+              <h4>Follow Us</h4>
+              <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-pinterest"></i>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>About</h4>
+          <a href="#">About</a>
+          <a href="#">Dellivary Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Term & condition</a>
+          <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+          <h4>My Account</h4>
+          <a href="#">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Order</a>
+          <a href="#">Help</a>
+      </div>
+      <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store Or Google Play</p>
+          <div class="row">
+              <img  class="Appsimg" src="https://thumbs.dreamstime.com/b/google-play-app-store-icons-google-play-app-store-icons-editable-vector-illustration-isolated-white-background-123024624.jpg" alt="">
+          </div>
+          <p>Secured Payment Gateways</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRALRmCM-L56zHwyGGptBqXlu4u2JFaGd-EakhazieeNGYmCHzyP0U4Z-abJ67Bag_klg&usqp=CAU" alt="">
+      </div>
+      <div class="copyright">
+          <p>2022 Tech - Ecommerce site</p>
+      </div>
+    </footer>
+    <script>
+         var MainImg=document.getElementById("MainImg");
+        var smallimg=document.getElementsByClassName("small-img");
+        
+      smallimg[0].onclick = function(){
+          MainImg.src = smallimg[0].src;
+      }
+      smallimg[1].onclick = function(){
+          MainImg.src = smallimg[1].src;
+      }
+      smallimg[2].onclick = function(){
+          MainImg.src = smallimg[2].src;
+      }
+      smallimg[3].onclick = function(){
+          MainImg.src = smallimg[3].src;
+      }
+      smallimg[4].onclick = function(){
+          MainImg.src = smallimg[4].src;
+      }
+    </script>
+</body>
+</html>

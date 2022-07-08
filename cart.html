@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Ec_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  
+    <style>
+        #cart table{
+            border-collapse: collapse;
+            table-layout: fixed;
+            white-space:nowrap;
+        }
+        #cart table td:nth-child(1){
+             width: 100px;
+             text-align: center;
+        }
+        #cart table td:nth-child(2){
+             width: 150px;
+             text-align: center;
+        }
+        #cart table td:nth-child(3){
+             width: 250px;
+             text-align: center;
+        }
+        #cart table td:nth-child(4),
+        #cart table td:nth-child(5),
+        #cart table td:nth-child(6){
+             width: 150px;
+             text-align: center;
+        }
+        #cart table td:nth-child(5) input{
+            width: 70px;
+            padding: 10px 5px 10px 15px;
+        }
+        #cart table thead{
+            border: 1px solid #e2e9e1;
+            border-left: none;
+            border-right: none;
+        }
+        #cart table thead td{
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            padding: 18px 0;
+        }
+        #cart table tbody tr td{
+            padding-top: 15px;
+        }
+        #cart table tbody td{
+            font-size: 13px;
+        }
+        #cart-add{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        /* #coupon{
+           width: 100px;
+           margin-bottom: 30px;
+        } */
+        #coupon h3,
+        #subtotal h3{
+          padding-bottom: 15px;
+        }
+        #coupon input{
+           padding: 10px 20px;
+           outline: none;
+           width: 250px;
+           margin-right: 10px;
+           border: 1px solid #e2e9e1;             
+        }
+        #coupon button,
+        #subtotal button{
+          background-color: #088178;
+          color: #fff;
+          padding: 10px 12px;
+        }
+        #subtotal{
+            width: 400px;
+            margin-bottom: 30px;
+            border: 1px solid #e2e9e1;
+            padding: 30px;
+        }
+        #subtotal table{
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #subtotal table td{
+              width: 50%;
+              border: 1px solid #e2e2e2;
+              padding: 10px;
+              font-size: 13px;
+        }
+        #page-header.about-header{
+     background-image: url("images/CartBanner.jpg");
+}
+        </style>
+</head>
+<body>
+    <section id="header">
+     <a href="#"><img  class="imgheader" src="images/FasionCentralLogoo.png" alt=""></a>
+
+     <div>
+         <ul id="navbar">
+            <li><a  href="index.html">Home</a></li>
+            <li><a  href="shopwebsites.html">Shop</a></li>
+             <li><a  href="Blog.html">Blog</a></li>
+             <li><a  href="about.html">About</a></li>
+             <li><a   href="Contact.html">Contact</a></li>
+             <li><a class="active" href="cart.html"> <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></li>
+             <!-- <a href="#" id="close" ><i class="fas fa-times"></i></a> -->
+         </ul>
+         <div class="mobile">
+             <a href="citilink.html"> <i class="fa-solid fa-user"></i></a>
+             <i id="bar" class="fas fa-outdent"></i>
+         </div>
+     </div>
+    </section>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+    <section id="page-header" class="about-header">
+    
+       <h5>#Let's talk</h5>
+
+       
+    
+    </section>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+   <section id="cart" class="section-p1">
+       <table width="100%">
+           <thead>
+               <tr>
+                   <td>Remove</td>
+                   <td>Image</td>
+                   <td>Product</td>
+                   <td>Price</td>
+                   <td>Quntity</td>
+                   <td>SubTotal</td>
+               </tr>
+               <tbody>
+                   <tr>
+                       <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                       <td><img src="images/product1.png" alt="" width="70px" height="80px"></td>
+                       <td>Cartoon Astronaut T-shirts</td>
+                       <td>$188.20</td>
+                       <td><input type="number" value="1"></td>
+                       <td>188.20$</td>
+                   </tr>
+                   <tr>
+                       <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                       <td><img src="images/product2.png" alt="" width="70px" height="80px"></td>
+                       <td>Cartoon Astronaut T-shirts</td>
+                       <td>$188.20</td>
+                       <td><input type="number" value="1"></td>
+                       <td>188.20$</td>
+                   </tr>
+                   <tr>
+                       <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                       <td><img src="images/product3.webp" alt="" width="70px" height="80px"></td>
+                       <td>Cartoon Astronaut T-shirts</td>
+                       <td>$188.20</td>
+                       <td><input type="number" value="1"></td>
+                       <td>188.20$</td>
+                   </tr>
+               </tbody>
+           </thead>
+       </table>
+   </section>
+   <!-- --------------------------------------------------------------------------------- -->
+   <section id="cart-add" class="section-p1">
+       <div id="coupon">
+           <h3>Apply Coupon</h3>
+           <div>
+               <input type="text" placeholder="Enter your Coupon">
+               <button class="normal">Apple</button>
+           </div>
+       </div>
+       <div id="subtotal">
+           <h3>Cart Totals</h3>
+           <table>
+               <tr>
+                   <td>Cart Subtotal</td>
+                   <td>$ 335</td>
+               </tr>
+               <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                   </tr>
+                   <tr>
+                      <td><strong>Total</strong></td>
+                      <td><strong>$ 335</strong></td>
+                   </tr>
+            
+           </table>
+           <button class="normal">Proceed to Chackout</button>
+       </div>
+   </section>
+  <!-- ------------------------------------------------------------------------------- -->
+  <footer class="section-p1">
+      <div class="col">
+          <img class="imgheader" src="images/FasionCentralLogoo.png" alt="">
+          <h4>Contact</h4>
+          <p><strong>Address :</strong>Maharastra, Nagpur Butibori-441108 Five Star Hotel</p>
+          <p><strong>Phone :</strong>(+91)9307402321/(+91)9689750969</p>
+          <p><strong>Email :</strong>bhoyarsanket71@gmail.com</p>
+          <p><strong>Hours :</strong>10.00-18.00 Mon-Sat</p>
+          <div class="follow">
+              <h4>Follow Us</h4>
+              <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-pinterest"></i>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>About</h4>
+          <a href="#">About</a>
+          <a href="#">Dellivary Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Term & condition</a>
+          <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+          <h4>My Account</h4>
+          <a href="#">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Order</a>
+          <a href="#">Help</a>
+      </div>
+      <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store Or Google Play</p>
+          <div class="row">
+              <img  class="Appsimg" src="images/googleplay.jpg" alt="">
+          </div>
+          <p>Secured Payment Gateways</p>
+          <img src="images/paymentsecure.png" alt="">
+      </div>
+      <div class="copyright">
+          <p>2022 Tech - Ecommerce site</p>
+      </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
